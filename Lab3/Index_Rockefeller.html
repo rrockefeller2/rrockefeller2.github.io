@@ -71,7 +71,7 @@ function style(feature){
           var minValue = 100;
           var minRadius = 5;
 function calcRadius(val) {
- return 1 * Math.pow(val/minValue, .8) * minRadius;
+ return .75 * Math.pow(val/minValue, .6) * minRadius;
 }
           var covidData = new L.geoJson(covidData,{
           onEachFeature : onEachFeature,
