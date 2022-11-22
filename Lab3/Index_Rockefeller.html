@@ -73,7 +73,7 @@ function style(feature){
 function calcRadius(val) {
  return 0.9 * Math.pow(val/minValue, .7) * minRadius;
 }
-          var covidData = new L.geoJson(covidData).addTo(map);
+          var covidData = new L.geoJson(covidData);
           onEachFeature : onEachFeature,
           pointToLayer: function(feature, ll){
        return L.circleMarker(ll, {
