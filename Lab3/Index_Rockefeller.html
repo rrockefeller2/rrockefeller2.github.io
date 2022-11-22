@@ -63,7 +63,7 @@ function style(feature){
                     fillColor: getColor(feature.properties.POP10),
                     weight: 2,
                     opacity: 1,
-                    color: 'yellow',
+                    color: 'blue',
                     fillOpacity: 0.9
                 };
             }
@@ -77,10 +77,10 @@ function calcRadius(val) {
           onEachFeature : onEachFeature,
           pointToLayer: function(feature, ll){
        return L.circleMarker(ll, {
-               color: '#000000',
+               color: '#c51b8a',
                opacity: 1,
                weight: 2,
-               fillColor: '#808080',
+               fillColor: '#f768a1',
                fillOpacity: .5,
                //radius: 10
                radius: calcRadius(feature.properties.covid)
