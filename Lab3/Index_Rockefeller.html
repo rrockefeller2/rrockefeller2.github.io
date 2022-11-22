@@ -102,8 +102,7 @@ prefer.
         grades = [0, 1000000, 2000000, 5000000, 10000000]; // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
          div.innerHTML = '<b>Population 2019 <br><br></b>';
 // The legend title, in this case it's Population 2019
-// Loop through the classes or “grades” and generate a label with a colored square for
-each interval.
+// Loop through the classes or “grades” and generate a label with a colored square for each interval.
         for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
         '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
