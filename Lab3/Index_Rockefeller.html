@@ -52,11 +52,11 @@ ext: 'png'
 }).addTo(map);
 
 function getColor(value) {
-                return value > 50000000 ? '#54278f':
-                       value > 25000000  ? '#756bb1':
-                       value > 10000000  ? '#9e9ac8':
-                       value > 5000000  ? '#cbc9e2':
-                                          '#f2f0f7';
+                return value > 50000000 ? '#08519c':
+                       value > 25000000  ? '#3182bd':
+                       value > 10000000  ? '#6baed6':
+                       value > 5000000  ? '#bdd7e7':
+                                          '#eff3ff';
             }
 function style(feature){
                 return {
@@ -71,7 +71,7 @@ function style(feature){
           var minValue = 100;
           var minRadius = 5;
 function calcRadius(val) {
- return 0.8 * Math.pow(val/minValue, .75) * minRadius;
+ return 1.3 * Math.pow(val/minValue, .9) * minRadius;
 }
           var covidData = new L.geoJson(covidData,{
           onEachFeature : onEachFeature,
