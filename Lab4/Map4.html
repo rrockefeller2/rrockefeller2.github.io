@@ -15,11 +15,12 @@
         "esri/layers/FeatureLayer",
         "esri/widgets/Legend"
       ], function(Map,TileLayer, GeoJSONLayer, MapView, FeatureLayer, Legend) {
-        const thebasemap = new TileLayer({
+         const url =
+"https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
+       const thebasemap = new TileLayer({
 url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
 });
-        const url =
-"https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
+
         const featureLayer = new FeatureLayer({
   url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/Parks/Park_Boundaries/MapServer/0"
 });
