@@ -7,8 +7,7 @@
  <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css"/>
  <script src="https://js.arcgis.com/4.14/"></script>
     <script>
-      require([
-        "esri/Map",
+      require([ "esri/Map",
         "esri/layers/TileLayer",
         "esri/layers/GeoJSONLayer",
         "esri/views/MapView",
@@ -86,8 +85,7 @@ var map = new Map({
                 title: "Legend"
               }]
           });
-            map.add(featureLayer);
-            view.ui.add(legend, "bottom-right");
+            
             map.add(featureLayer);
             view.ui.add(legend, "bottom-left");
           });
