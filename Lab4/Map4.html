@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>Lab 4 | YOUR NAME</title>
+  <style> html, body, #viewDiv {padding: 0; margin: 0; height: 100%; width: 100%;} </style>
+ <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css"/>
+ <script src="https://js.arcgis.com/4.14/"></script>
+    <script>
+      require([
+        "esri/Map",
+        "esri/layers/TileLayer",
+        "esri/layers/GeoJSONLayer",
+        "esri/views/MapView"],
+        "esri/layers/FeatureLayer"
+        function(Map,TileLayer, GeoJSONLayer, MapView, FeatureLayer) {
+        var map = new Map({
+          layers:[thebasemap, geojsonLayer]
+        });
+        const url =
+"https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
+const geojsonLayer = new GeoJSONLayer({
+url: url,
+copyright: “Rebecca Rockefeller”
+//renderer info would go here, and you add a comma to the field above
+});
+
+        var thebasemap = new TileLayer({
+url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
+});
+        var view = new MapView({
+                container: "viewDiv",
+                map: map,
+                zoom: 17,
+                center: [-96.68, 40.81] // longitude, latitude – change this as needed
+              });
+            });
+          </script>
+        </head>
+        <body>
+          <div id="viewDiv"></div>
+        </body>
+      </html>
