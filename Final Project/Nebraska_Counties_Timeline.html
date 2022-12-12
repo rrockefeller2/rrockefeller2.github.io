@@ -61,12 +61,12 @@
 	  //for orangecirclemarker - which is your timeline layer... you need to add a function first to get the color based on year
 	  function getColor(value) 
 	  {
-                return value == 1 ? '#b2182b':
-                       value == 2 ? '#ef8a62':
-                       value == 3 ? '#fddbc7':
-                       value == 4 ? '#2166ac':
-                       value == 5 ? '#67a9cf':
-                       value == 6 ? '#d1e5f0':
+                return value == 1854 ? '#b2182b':
+                       value => 1860 ? '#ef8a62':
+                       value => 1872 ? '#fddbc7':
+                       value => 1879 ? '#2166ac':
+                       value => 1887 ? '#67a9cf':
+                       value <= 1888 ? '#d1e5f0':
                                     '#f7f7f7';
             }
 	  
