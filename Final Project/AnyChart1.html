@@ -48,7 +48,7 @@ minZoom: 0,
 maxZoom: 20,
 ext: 'png'
 }).addTo(map);
- $.getJSON("https://rrockefeller2.github.io/Final%20Project/Nebraska_Counties.js")
+ .getJSON("https://rrockefeller2.github.io/Final%20Project/Nebraska_Counties.js")
             .done(function(data) {
                 var info = processData(time);
                 createPropSymbols(info.timestamps, time);
