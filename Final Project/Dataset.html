@@ -72,7 +72,8 @@ var sliderControl = L.control.sliderControl({
        layer: timelineLayer,
        range: true // gives it a bottom and a top slider
    });
- 
+ sliderControl.startSlider(); // initialize
+         map.addControl(sliderControl);
    
    var timeSlider = new TimeSlider({
 container: "timeSlider",
@@ -80,8 +81,7 @@ view: view,
 timeVisible: true, // show the time stamps on the timeslider
 loop: true
 });
-            sliderControl.startSlider(); // initialize
-         map.addControl(sliderControl);
+            
 function getColor(value) {
                 return value == 1854  ? '#f0f9e8':
                        value => 1860  ? '#ccebc5':
