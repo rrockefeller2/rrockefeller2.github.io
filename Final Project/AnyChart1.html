@@ -50,17 +50,17 @@ ext: 'png'
 }).addTo(map);
  
 function getColor(value) {
-                return value == 1854  ? '#f0f9e8':
-                       value => 1860  ? '#ccebc5':
-                       value => 1872  ? '#a8ddb5':
-                       value => 1879  ? '#7bccc4':
-                       value => 1887  ? '#43a2ca':
-                       value <= 1888  ? '#0868ac':
+                return value > 1913  ? '#f0f9e8':
+                       value > 1887  ? '#ccebc5':
+                       value > 1879  ? '#a8ddb5':
+                       value > 1872  ? '#7bccc4':
+                       value > 1860 ? '#43a2ca':
+                       value == 1854  ? '#0868ac':
                                           '#eff3ff';
             }
 function style(feature){
                 return {
-                    fillColor: getColor(feature.properties.dataset),
+                    fillColor: getColor(feature.properties.time),
                     weight: 2,
                     opacity: 1,
                     color: 'black',
